@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" ctype="Workspace" />
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workbench ActiveDocument="RandomGenerator/Form1.Designer.cs" ctype="Workbench">
+    <Files>
+      <File FileName="RandomGenerator/Form1.cs" Line="22" Column="1" />
+      <File FileName="RandomGenerator/Form1.Designer.cs" Line="25" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="RandomGenerator" expanded="True">
+            <Node name="Form1.cs" expanded="True">
+              <Node name="Form1.Designer.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True">
+          <Node name="RandomGenerator" expanded="True">
+            <Node name="RandomGenerator" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
