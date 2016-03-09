@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Model.Functions;
-
-namespace RandomGenerator.Model
+﻿namespace RandomGenerator.Model
 {
-    //находит границы интервалов для универсального метода
+    using System;
+    using System.Collections.Generic;
+
+    using RandomGenerator.Model.Functions;
+
+    /// <summary>
+    /// находит границы интервалов для универсального метода
+    /// </summary>
     public class IntervalFinder
     {
         public ArrayOfPoints Borders = new ArrayOfPoints();//массив границ интервалов

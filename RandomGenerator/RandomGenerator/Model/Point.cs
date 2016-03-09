@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model
+﻿namespace RandomGenerator.Model
 {
-    //точка дискретной СВ
+    using System;
+
+    /// <summary>
+    /// точка дискретной СВ
+    /// </summary>
     public class Point
     {
         private double X;

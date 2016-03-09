@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model
+﻿namespace RandomGenerator.Model
 {
-    //хранит выборку
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// хранит выборку
+    /// </summary>
     public class Sampling
     {
         private List<double> Values = new List<double>();//выборка
@@ -40,7 +40,7 @@ namespace RandomGenerator.Model
 
         //возвращает упорядоченную по возрастанию выборку
         public Sampling RangedSampling()
-        { 
+        {
             Sampling mass = this.Clone();
             for (int i = 0; i < GetVolume(); i++)
             {
@@ -70,7 +70,7 @@ namespace RandomGenerator.Model
             double min = Values[0];
             for (int i = 0; i < GetVolume(); i++)
             {
-                if(GetValue(i)<min)
+                if (GetValue(i) < min)
                 {
                     min = GetValue(i);
                 }
@@ -96,7 +96,7 @@ namespace RandomGenerator.Model
         public Sampling Clone()
         {
             Sampling Result = new Sampling();
-            for(int i=0;i<GetVolume();i++)
+            for (int i = 0; i < GetVolume(); i++)
             {
                 Result.AddValue(GetValue(i));
             }

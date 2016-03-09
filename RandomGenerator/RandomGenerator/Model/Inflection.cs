@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model
+﻿namespace RandomGenerator.Model 
 {
-    //точка перегиба
+    using System;
+
+    /// <summary>
+    /// точка перегиба
+    /// </summary>
     public class Inflection 
     {
         private double X;
