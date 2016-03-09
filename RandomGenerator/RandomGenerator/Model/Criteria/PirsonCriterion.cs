@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model.Functions;
-
-namespace RandomGenerator.Model.Criteria
+﻿namespace RandomGenerator.Model.Criteria
 {
-    //критерий пирсона
+    using System;
+    using System.Collections.Generic;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model.Functions;
+
+    /// <summary>
+    /// критерий пирсона
+    /// </summary>
     public class PirsonCriterion
     {
         private Sampling ranged = null;//упорядоченная выборка

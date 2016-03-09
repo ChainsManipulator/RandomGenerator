@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Model.Functions;
-
 namespace RandomGenerator.Model.Generators
 {
+    using System;
+    using System.Collections.Generic;
+
+    using RandomGenerator.Model.Functions;
+
     public class UniversalGenerator : IGenerator
     {
         private UniversalDistributionFunction Function = null;

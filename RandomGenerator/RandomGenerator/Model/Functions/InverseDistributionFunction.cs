@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace RandomGenerator.Model.Functions
 {
-    //функция распределения обратного метода непрерывной СВ
+    using System;
+
+    /// <summary>
+    /// функция распределения обратного метода непрерывной СВ
+    /// </summary>
     public class InverseDistributionFunction : IDistributionFunction, IDensityFunction
     {
         private static InverseDistributionFunction func = null;

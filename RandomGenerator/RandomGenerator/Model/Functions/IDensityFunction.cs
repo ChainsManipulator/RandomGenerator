@@ -1,6 +1,8 @@
 namespace RandomGenerator.Model.Functions
 {
-    //интерфейс функции плотности
+    /// <summary>
+    /// интерфейс функции плотности
+    /// </summary>
     public interface IDensityFunction
     {
         double GetDensityFunctionValue(double x);

@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Functions;
-using ZedGraph;
-
-namespace RandomGenerator.View
+﻿namespace RandomGenerator.View
 {
-    //художник рисующий вывески
+    using System;
+    using System.Collections.Generic;
+    using System.Drawing;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Functions;
+
+    using ZedGraph;
+
+    /// <summary>
+    /// художник рисующий вывески
+    /// </summary>
     public class Drawer
     {
         public void DrawGraph1(ZedGraphControl control,Sampling sampling,int type)

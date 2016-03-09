@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace RandomGenerator.Model
 {
-    //класс-контейнер границ карманов
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// класс-контейнер границ карманов
+    /// </summary>
     public class ArrayOfPoints
     {
         private List<double> Points = new List<double>(); //массив точек

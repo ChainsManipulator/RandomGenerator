@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Controller.Containers
+﻿namespace RandomGenerator.Controller.Containers
 {
-    //контейнер с данными для второго генератора
-    public class InverseContainer:Container
+    /// <summary>
+    /// контейнер с данными для второго генератора
+    /// </summary>
+    public class InverseContainer : Container
     {
-        //наследуется от абстректного контейнера и содержит его поля
-        public int PirsonIntervals;//количество интервалов в критерии пирсона
-        
+        /// <summary>
+        /// наследуется от абстректного контейнера и содержит его поля
+        /// количество интервалов в критерии пирсона
+        /// </summary>
+        public int PirsonIntervals;
+
     }
 }

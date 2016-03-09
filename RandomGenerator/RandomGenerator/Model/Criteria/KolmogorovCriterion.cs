@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model.Functions;
-
-namespace RandomGenerator.Model.Criteria
+﻿namespace RandomGenerator.Model.Criteria
 {
-    //критерий колмогрова
+    using System;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model.Functions;
+
+    /// <summary>
+    /// критерий колмогрова
+    /// </summary>
     public class KolmogorovCriterion
     {
         TableKolmogorova table = new TableKolmogorova();//таблица критерия

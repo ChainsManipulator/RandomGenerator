@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model.Criteria
+﻿namespace RandomGenerator.Model.Criteria
 {
-    //таблица для критерия пирсона
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// таблица для критерия пирсона
+    /// </summary>
     public class PirsonTable
     {
         private List<Point> r1 = new List<Point>();

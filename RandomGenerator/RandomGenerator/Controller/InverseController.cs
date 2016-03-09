@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
-using System.Threading;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Criteria;
-using RandomGenerator.Model.Functions;
-using RandomGenerator.Model.Generators;
-using RandomGenerator.View;
-using ZedGraph;
-
-namespace RandomGenerator.Controller
+﻿namespace RandomGenerator.Controller
 {
-    //контроллер генератора с обратной функцией
+    using System.Threading;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Generators;
+    using RandomGenerator.View;
+
+    /// <summary>
+    /// контроллер генератора с обратной функцией
+    /// </summary>
     public class InverseController
     {
         private Sampling sampling = new Sampling();//выборка
@@ -25,7 +21,7 @@ namespace RandomGenerator.Controller
         public InverseController(InverseContainer InputData, AnswerContainer result)
         {
             data = InputData;
-            lock(result)
+            lock (result)
             {
                 Answer = result;
             }
@@ -49,7 +45,7 @@ namespace RandomGenerator.Controller
                 sampling.AddValue(generator.GenerateValue());//добавление сгенерированного значения к выборке
             }
             //создаём экземпляр контроллера критерия пирсона
-            PirsonController PirsonControl = new PirsonController(data.Controll3, sampling, Answer,1, data.PirsonIntervals, null);
+            PirsonController PirsonControl = new PirsonController(data.Controll3, sampling, Answer, 1, data.PirsonIntervals, null);
             Thread PirsonThread = new Thread(PirsonControl.Calculate);//помещаем конроллер в нить
             PirsonThread.Start();//запускаем нить
             //создаём экземпляр контроллера критерия колмогорова
@@ -61,7 +57,7 @@ namespace RandomGenerator.Controller
             {
                 Answer.sampling = sampling;//ложим выборку в контейнер результов
                 Answer.GenerationFinished = true;//вычисления завершены
-            } 
+            }
         }
     }
 }

@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Model;
-
-namespace RandomGenerator.Controller.Containers
+﻿namespace RandomGenerator.Controller.Containers
 {
-    //контейнер с данными для третьего генератора
-    public class DiscreteContainer:Container
+    using System.Collections.Generic;
+
+    using RandomGenerator.Model;
+
+    /// <summary>
+    /// контейнер с данными для третьего генератора
+    /// </summary>
+    public class DiscreteContainer : Container
     {
-        public List<Point> Values = new List<Point>();//массив точек дискретной функции плотности
+        /// <summary>
+        /// массив точек дискретной функции плотности
+        /// </summary>
+        public List<Point> Values = new List<Point>();
     }
 }

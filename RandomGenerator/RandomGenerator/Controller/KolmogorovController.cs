@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Criteria;
-using RandomGenerator.Model.Functions;
-using RandomGenerator.View;
-using ZedGraph;
-
-namespace RandomGenerator.Controller
+﻿namespace RandomGenerator.Controller
 {
-    //контроллер критерия колмогорова
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Criteria;
+    using RandomGenerator.Model.Functions;
+    using RandomGenerator.View;
+
+    using ZedGraph;
+
+    /// <summary>
+    /// контроллер критерия колмогорова
+    /// </summary>
     public class KolmogorovController
     {
         private AnswerContainer Answer = null;//контейнер для результатов
@@ -38,7 +38,7 @@ namespace RandomGenerator.Controller
         {
             Drawer drawer = new Drawer();//художник рисующий вывески
             KolmogorovCriterion Kolmogorov = new KolmogorovCriterion();//критерий колмогорова
-            lock(Answer)
+            lock (Answer)
             {
                 Answer.Kolmogorov = Kolmogorov.Calculate(sampling, FuncType);//вычисление критерия
                 Answer.progress += sampling.GetVolume();//прогресс +25%
@@ -48,7 +48,6 @@ namespace RandomGenerator.Controller
             {
                 Answer.KolmogorovFinished = true;//вычисления закончены
             }
-         }
-
+        }
     }
 }

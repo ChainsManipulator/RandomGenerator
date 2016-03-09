@@ -1,6 +1,8 @@
 namespace RandomGenerator.Model.Generators
 {
-    //интерфейс генераторов
+    /// <summary>
+    /// интерфейс генераторов
+    /// </summary>
     public interface IGenerator
     {
         double GenerateValue();

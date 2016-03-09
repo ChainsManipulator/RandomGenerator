@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Threading;
-using System.Windows.Forms;
-using RandomGenerator.Controller;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Functions;
-using ZedGraph;
-using ZedGraph.Web;
-using Point=RandomGenerator.Model.Point;
-
-namespace RandomGenerator
+﻿namespace RandomGenerator
 {
+    using System;
+    using System.Threading;
+    using System.Windows.Forms;
+
+    using RandomGenerator.Controller;
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Functions;
+
+    using Point = RandomGenerator.Model.Point;
+
     public partial class Form1 : Form
     {
 
@@ -635,4 +630,3 @@ namespace RandomGenerator
         }
     }
 }
-

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model.Functions
+﻿namespace RandomGenerator.Model.Functions
 {
-    class UniversalDistributionFunction : IDistributionFunction , IDensityFunction
+    using System;
+    using System.Collections.Generic;
+
+    public class UniversalDistributionFunction : IDistributionFunction, IDensityFunction
     {
         private static UniversalDistributionFunction func = null;
 
@@ -38,7 +37,7 @@ namespace RandomGenerator.Model.Functions
             for (int i = 1; i < Values.Count; i++)
             {
                 square.Add((Values[i].GetX - Values[i - 1].GetX) * (Values[i].GetY + Values[i - 1].GetY) / 2);
-                control += square[i-1];
+                control += square[i - 1];
             }
             int tochnost = 10000;//настройка точности проверки 10000-до 4 знака, 1000 - до 3 знака включительно и т.д.
             if ((Math.Round(control * tochnost) / tochnost) != 1)
@@ -62,7 +61,7 @@ namespace RandomGenerator.Model.Functions
             double y = 0;
             for (int i = 1; i < Values.Count; i++)
             {
-                if(x<=Values[i].GetX)
+                if (x <= Values[i].GetX)
                 {
                     y += (x - Values[i - 1].GetX) * (Values[i - 1].GetY + this.GetDensityFunctionValue(x)) / 2;
                     if (y < 0)
@@ -94,11 +93,11 @@ namespace RandomGenerator.Model.Functions
             {
                 throw new Exception("Обратная функция существует только в интервале от 0 до 1");
             }
-            if(y==0)
+            if (y == 0)
             {
                 return Values[0].GetX;
             }
-            if(y==1)
+            if (y == 1)
             {
                 return Values[Values.Count - 1].GetX;
             }
@@ -112,11 +111,11 @@ namespace RandomGenerator.Model.Functions
                 x = this.GetFunctionValue(FirstBorder + (SecondBorder - FirstBorder) / 2);
                 if (y > x)
                 {
-                    FirstBorder += (SecondBorder - FirstBorder)/2;
+                    FirstBorder += (SecondBorder - FirstBorder) / 2;
                 }
                 else
                 {
-                    SecondBorder = FirstBorder + (SecondBorder - FirstBorder)/2;
+                    SecondBorder = FirstBorder + (SecondBorder - FirstBorder) / 2;
                 }
             }
             while (Math.Abs(Prevx - x) > 0.0000000001);
@@ -155,7 +154,7 @@ namespace RandomGenerator.Model.Functions
         //возвращает математическое ожидание СВ
         public double GetExpectation()
         {
-            double step = (Xmax() - Xmin())/100;
+            double step = (Xmax() - Xmin()) / 100;
             double prevM = 0;
             double M = 1;
             while (Math.Abs(M - prevM) > 0.000001)
@@ -164,7 +163,7 @@ namespace RandomGenerator.Model.Functions
                 double current = 0;
                 for (double x = Xmin(); x < Xmax(); x += step)
                 {
-                    current += step*((x + step)*GetDensityFunctionValue(x + step) + x*GetDensityFunctionValue(x))/2;
+                    current += step * ((x + step) * GetDensityFunctionValue(x + step) + x * GetDensityFunctionValue(x)) / 2;
                 }
                 M = current;
                 step /= 2;
@@ -208,8 +207,7 @@ namespace RandomGenerator.Model.Functions
 
         public double Xmax()
         {
-            return Values[Values.Count-1].GetX;
+            return Values[Values.Count - 1].GetX;
         }
     }
 }
-

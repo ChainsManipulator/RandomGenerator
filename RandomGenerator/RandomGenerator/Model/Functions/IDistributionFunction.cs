@@ -1,6 +1,8 @@
 namespace RandomGenerator.Model.Functions
 {
-    //интерфейс функции распределения
+    /// <summary>
+    /// интерфейс функции распределения
+    /// </summary>
     public interface IDistributionFunction
     {
         double GetFunctionValue(double x);

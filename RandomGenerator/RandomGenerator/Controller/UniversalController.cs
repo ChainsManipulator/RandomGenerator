@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
-using System.Threading;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Criteria;
-using RandomGenerator.Model.Functions;
-using RandomGenerator.Model.Generators;
-using RandomGenerator.View;
-using ZedGraph;
-
-namespace RandomGenerator.Controller
+﻿namespace RandomGenerator.Controller
 {
-    //контроллер универсального метода
+    using System.Threading;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Generators;
+    using RandomGenerator.View;
+
+    /// <summary>
+    /// контроллер универсального метода
+    /// </summary>
     public class UniversalController
     {
         private Sampling sampling = new Sampling();//выборка

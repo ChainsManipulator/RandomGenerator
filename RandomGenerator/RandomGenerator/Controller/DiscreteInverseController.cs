@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
-using System.Threading;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Criteria;
-using RandomGenerator.Model.Functions;
-using RandomGenerator.Model.Generators;
-using RandomGenerator.View;
-using ZedGraph;
-using Point=RandomGenerator.Model.Point;
-
-namespace RandomGenerator.Controller
+﻿namespace RandomGenerator.Controller
 {
-    //контроллер генератора с дискретной функцией
+
+    using System.Threading;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Generators;
+    using RandomGenerator.View;
+
+    /// <summary>
+    /// контроллер генератора с дискретной функцией
+    /// </summary>
     public class DiscreteInverseController
     {
         private Sampling sampling = new Sampling();//выборка
@@ -26,7 +22,7 @@ namespace RandomGenerator.Controller
         public DiscreteInverseController(DiscreteContainer InputData, AnswerContainer result)
         {
             data = InputData;
-            lock(result)
+            lock (result)
             {
                 Answer = result;
             }
@@ -64,6 +60,5 @@ namespace RandomGenerator.Controller
                 Answer.GenerationFinished = true;//вычисления завершены
             }
         }
-
     }
 }

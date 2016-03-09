@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Controller.Containers;
-using RandomGenerator.Model;
-using RandomGenerator.Model.Criteria;
-using RandomGenerator.View;
-using ZedGraph;
-
-namespace RandomGenerator.Controller
+﻿namespace RandomGenerator.Controller
 {
-    //контроллер критрерия пирсона
+    using System.Collections.Generic;
+
+    using RandomGenerator.Controller.Containers;
+    using RandomGenerator.Model;
+    using RandomGenerator.Model.Criteria;
+    using RandomGenerator.View;
+
+    using ZedGraph;
+
+    /// <summary>
+    /// контроллер критрерия пирсона
+    /// </summary>
     public class PirsonController
     {
         private AnswerContainer Answer = null;//контейнер для результатов

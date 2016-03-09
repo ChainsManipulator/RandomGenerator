@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Controller.Containers
+﻿namespace RandomGenerator.Controller.Containers
 {
     public class KolmogorovContainer
     {

@@ -1,23 +1,24 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Model.Functions;
-
 namespace RandomGenerator.Model
 {
+    using System;
 
-    //класс для вычисления площади под функцией плотности в нужном интервале
+    using RandomGenerator.Model.Functions;
+
+    /// <summary>
+    /// класс для вычисления площади под функцией плотности в нужном интервале
+    /// </summary>
     public class Square
     {
-        private UniversalDistributionFunction Function = null;
+        private UniversalDistributionFunction Function;
 
         public double GetSquare(double x1, double x2)
         {
             Function = UniversalDistributionFunction.Create();
-            if (x2<x1)
+            if (x2 < x1)
             {
                 throw new Exception("Верхняя граница интеграла не может быть меньше нижней границы интеграла");
             }
+
             double s = Function.GetFunctionValue(x2) - Function.GetFunctionValue(x1);
             return s;
         }

@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model.Criteria
+﻿namespace RandomGenerator.Model.Criteria
 {
-    //таблица для критерия колмогорова
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// таблица для критерия колмогорова
+    /// </summary>
     public class TableKolmogorova
     {
-        private List<Point> Table=new List<Point>();
+        private List<Point> Table = new List<Point>();
 
         //конструктор
         public TableKolmogorova()
@@ -34,16 +35,16 @@ namespace RandomGenerator.Model.Criteria
             Table.Add(new Point(1.9, 0.002));
             Table.Add(new Point(2.0, 0.001));
         }
-        
+
         public double GetP(double λ)
         {
             if (λ > 2)//если λ слишком большая
             {
                 return 0;
             }
-            for (int i = 0; i < Table.Count-1; i++)//поиск значения в таблице
+            for (int i = 0; i < Table.Count - 1; i++)//поиск значения в таблице
             {
-                if ((λ >= Table[i].GetX) && (λ <= Table[i+1].GetX))
+                if ((λ >= Table[i].GetX) && (λ <= Table[i + 1].GetX))
                 {
                     return Table[i].GetP + (λ - Table[i].GetX) * (Table[i + 1].GetP - Table[i].GetP) / (Table[i + 1].GetX - Table[i].GetX);
                 }

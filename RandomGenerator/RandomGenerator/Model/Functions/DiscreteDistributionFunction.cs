@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
-
-namespace RandomGenerator.Model.Functions
+﻿namespace RandomGenerator.Model.Functions
 {
-    //дискретная функция распределения
+    using System;
+    using System.Collections.Generic;
+
+
+    /// <summary>
+    /// дискретная функция распределения
+    /// </summary>
     public class DiscreteDistributionFunction : IDistributionFunction, IDensityFunction
     {
         private static DiscreteDistributionFunction func = null;//экземпляр самой функции
@@ -33,7 +33,7 @@ namespace RandomGenerator.Model.Functions
             double control = 0;// проверяем чтобы суммарная вероятность была равна 1
             for (int i = 0; i < Values.Count; i++)
             {
-                control += ((Point)Values[i]).GetP;
+                control += Values[i].GetP;
             }
             int tochnost = 10000;//настройка точности проверки 10000-до 4 знака, 1000 - до 3 знака включительно и т.д.
             if ((Math.Round(control * tochnost) / tochnost) != 1)
@@ -166,7 +166,7 @@ namespace RandomGenerator.Model.Functions
         //возвращает СКО СВ
         public double GetMeanSquareDeviation()
         {
-          
+
             return Math.Sqrt(GetDispersion());
         }
 

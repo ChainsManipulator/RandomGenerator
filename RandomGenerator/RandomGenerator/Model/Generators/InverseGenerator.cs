@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Model.Functions;
-
-namespace RandomGenerator.Model.Generators
+﻿namespace RandomGenerator.Model.Generators
 {
+    using System;
+
+    using RandomGenerator.Model.Functions;
+
     public class InverseGenerator:IGenerator
     {
         private InverseDistributionFunction Function = null;

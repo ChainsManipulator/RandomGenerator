@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RandomGenerator.Model.Functions
+﻿namespace RandomGenerator.Model.Functions
 {
-    //практическая функция распределения
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// практическая функция распределения
+    /// </summary>
     public class PracticalDistributionFunction
     {
         private List<Point> Values = new List<Point>();

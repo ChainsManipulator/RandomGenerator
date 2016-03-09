@@ -1,20 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RandomGenerator.Model;
-
-namespace RandomGenerator.Controller.Containers
+﻿namespace RandomGenerator.Controller.Containers
 {
-    //контейнер с данными возвращаемыми критерием пирсона
+    using System.Collections.Generic;
+
+    using RandomGenerator.Model;
+
+    /// <summary>
+    /// контейнер с данными возвращаемыми критерием пирсона
+    /// </summary>
     public class PirsonContainer
     {
-        public int Intervals;// количество интервалов
-        public ArrayOfPoints Border = null ;//массив границ
-        public List<int> Nj= null;//массив практических частот
-        public int N;// размер выборки
-        public double P;// результат вычисления критерия пирсона
-        public List<double> NP;//массив теоретических частот
-        public double χ;//Хи
-        public int r; //число степеней свободы
+        /// <summary>
+        /// количество интервалов
+        /// </summary>
+        public int Intervals;
+
+        /// <summary>
+        /// массив границ
+        /// </summary>
+        public ArrayOfPoints Border = null;
+
+        /// <summary>
+        /// массив практических частот
+        /// </summary>
+        public List<int> Nj = null;
+
+        /// <summary>
+        /// размер выборки
+        /// </summary>
+        public int N;
+
+        /// <summary>
+        /// результат вычисления критерия пирсона
+        /// </summary>
+        public double P;
+
+        /// <summary>
+        /// массив теоретических частот
+        /// </summary>
+        public List<double> NP;
+
+        /// <summary>
+        /// Хи
+        /// </summary>
+        public double χ;
+
+        /// <summary>
+        /// число степеней свободы
+        /// </summary>
+        public int r;
     }
 }
